@@ -330,3 +330,23 @@ export default ViewEventDetails;
             </div>
           </div>
         </section>
+--------------------------------------------------------
+
+CODE STRUCTRUE:
+src = > 
+Components => Header,Footer
+Utils = > Common handling function
+Helper = > Api Helper
+Assets
+Auth = >Login ,Register
+View = > Main Componenet
+Redux = >
+
+
+
+avoid things of code
+State declaration 
+
+
+"753214698"
+-------------------------------------------------------
