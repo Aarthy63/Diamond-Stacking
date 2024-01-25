@@ -242,3 +242,91 @@ return (
 };
 
 export default ViewEventDetails;
+
+----------------------------------------------------------
+<section className="row mt-2">
+          <div className="col-lg-6 col-md-block terms 1">
+            <div className="col-lg-12  mb-4" >
+              <div className="border">
+                {" "}
+                <div className="p-4 " >
+                  <h5>Terms & Conditons</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deserunt consequuntur error, minus harum totam sint soluta.
+                    Quas laboriosam accusamus, enim suscipit velit aliquid
+                    molestiae saepe odit exercitationem sint ducimus. Quaerat.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deserunt consequuntur error, minus harum totam sint soluta.
+                    Quas laboriosam accusamus, enim suscipit velit aliquid
+                    molestiae saepe odit exercitationem sint ducimus. Quaerat.
+                  </p>
+            
+               
+                
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-12  mb-4" >
+              <div className="border">
+                {" "}
+                <div className="p-4">
+                  <h5>Terms & Conditons</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deserunt consequuntur error, minus harum totam sint soluta.
+                    Quas laboriosam accusamus, enim suscipit velit aliquid
+                    molestiae saepe odit exercitationem sint ducimus. Quaerat.
+                  </p>
+  
+              
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-6 mb-4 activity">
+            <div className="border">
+              <div className="p-4 activity-rule">
+                <h5>Activity Rules</h5>
+                <h6>Participating in Subscription</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis ex qui quas nisi dicta maiores magnam? Vitae itaque
+                  officiis consectetur at ratione. In perferendis quia ipsa
+                  soluta libero fuga velit?
+                </p>
+
+                <h6>Token Distribution</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis ex qui quas nisi dicta maiores magnam? Vitae itaque
+                  officiis consectetur at ratione. In perferendis quia ipsa
+                  soluta libero fuga velit?.Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Facilis ex qui quas nisi dicta
+                  maiores magnam? Vitae itaque officiis consectetur at ratione.
+                  In perferendis quia ipsa soluta libero fuga velit?
+                </p>
+
+                
+
+                <h6>Participating in Subscription</h6>
+         
+                <h6>Token Distribution</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis ex qui quas nisi dicta maiores magnam? Vitae itaque
+                  officiis consectetur at ratione. In perferendis quia ipsa
+                  soluta libero fuga velit?.Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Facilis ex qui quas nisi dicta
+                  maiores magnam? Vitae itaque officiis consectetur at ratione.
+                  In perferendis quia ipsa soluta libero fuga velit?
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </section>
