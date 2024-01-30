@@ -345,7 +345,9 @@ Redux = >
 
 
 avoid things of code
-================================================================
+
+"753214698"
+-------------------------------------------------------
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { SignJWT, base64url } from "jose";
 
@@ -435,8 +437,3 @@ export const loginApi = createApi({
 });
 
 export const { useLogInUserMutation, useGetUserMutation } = loginApi;
-State declaration 
-
-
-"753214698"
--------------------------------------------------------
