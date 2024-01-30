@@ -345,6 +345,96 @@ Redux = >
 
 
 avoid things of code
+================================================================
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { SignJWT, base64url } from "jose";
+
+
+const getToken = () => {
+  return localStorage.getItem("LoggedUserToken");
+};
+
+const getAdditionalHeaders = async () => {
+  const secretKey = "https://knprkadmnbknd.koinpark.com";
+
+  const encryptedSecretKey =  window.btoa(secretKey);
+
+  const secret = new TextEncoder().encode(
+    encryptedSecretKey
+    );
+  // console.log(encryptedSecretKey);
+  const alg = 'HS256';
+  const contentVtieerHead = await new SignJWT({ 'urn:example:claim': true })
+  .setProtectedHeader({ alg })
+  .setExpirationTime('1min')
+  .sign(secret); 
+
+  const org = "xDhdfoBJFDUIFJLDFBDLhkfG+g==";
+  console.log(contentVtieerHead);
+  return {
+    "Content-Vtieer-Head": contentVtieerHead,
+    "Content-Vtieer-Org": org,
+  };
+};
+
+export const loginApi = createApi({
+  reducerPath: "loginApi",
+  baseQuery: fetchBaseQuery({ baseUrl: "https://knprkadmnbknd.koinpark.com" }),
+  endpoints: (builder) => ({
+    logInUser: builder.mutation({
+      query: (data) => {
+        // url: "",
+        // method: "POST",
+        // body: data,
+        // headers:{
+        try {
+          const token = getToken();
+          const additionalHeaders = getAdditionalHeaders();
+  
+          return {
+            url: "admin_support/sub_admin_login",
+            method: "POST",
+            body: data,
+            headers:  {
+              ...additionalHeaders,
+              Authorization : `Bearer ${token}`
+            }
+          };
+        } catch (error) {
+          return { error }
+
+        }
+
+      },
+      invalidatesTags: ["Login"],
+    }),
+    getUser: builder.mutation({
+      query: (param) => {
+        try {
+          const token = getToken();
+          const additionalHeaders = getAdditionalHeaders();
+  
+          return {
+            url: "admin/user_list",
+            method: "POST",
+            body: param,
+            headers: {
+              ...additionalHeaders,
+              Authorization: `Bearer ${token}`
+            }
+          };
+        } catch (error) {
+          return { error }
+
+        }
+      
+      },
+    
+    }),
+  }),
+});
+
+export const { useLogInUserMutation, useGetUserMutation } = loginApi;
 State declaration 
 
 
